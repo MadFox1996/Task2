@@ -1,0 +1,12 @@
+﻿@model TodolistItemDto
+
+@{
+	ViewData["Title"] = "Details";
+}
+
+<div>
+	<p>@Model.Title</p>
+	<p>@Html.FormatBool(Model.IsCompleted)</p>
+</div>
+
+<a asp-action="Index">Back</a>

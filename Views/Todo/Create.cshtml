@@ -1,0 +1,14 @@
+﻿@model CreateTodolistItemDto
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+@using (Html.BeginForm("Create", "Todo", FormMethod.Post))
+{
+    @Html.Label("Task Name");
+    @Html.TextBoxFor(m => m.Title);
+    @Html.Label("Status");
+    @Html.CheckBoxFor(m => m.IsCompleted);
+    <input type="submit" value="Create" />
+}

@@ -1,0 +1,15 @@
+﻿@model UpdateTodolistItemDto
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@using (Html.BeginForm("Edit", "Todo", FormMethod.Post))
+{
+    @Html.HiddenFor(mbox=>mbox.Id);
+    @Html.Label("Task Name");
+    @Html.TextBoxFor(m => m.Title);
+    @Html.Label("Status");
+    @Html.CheckBoxFor(m => m.IsCompleted);
+    <input type="submit" value="Edit" />
+}
